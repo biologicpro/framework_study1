@@ -182,14 +182,35 @@ PICO-8 is not just a game engine; it's a "fantasy console" designed around the i
 
 ---
 
+## 9. HaxeFlixel: The Cross-Platform 2D Framework
+
+HaxeFlixel is a popular, free, and open-source 2D game framework built on the Haxe programming language and the OpenFL library (a mimic of the Flash API).
+
+### Core Concepts:
+- **`FlxState`**: The primary organizational unit. A state represents a distinct part of your game, like a menu, a level, or a game-over screen. The engine manages a stack of states, and only the top one is active.
+- **`FlxSprite`**: The fundamental visual object. It represents any graphic on the screen with a position, and it comes with built-in properties for physics, animation, and more.
+- **`FlxGroup`**: A collection of other game objects. Groups are essential for managing related objects (like bullets or enemies) and for performing batch operations like collision checks.
+- **`FlxG`**: A global static class that provides easy access to core engine functionalities like input, sound, camera control, and state switching.
+
+### Property Management:
+- **Code-Centric with OOP**: HaxeFlixel follows a more traditional Object-Oriented Programming (OOP) approach. You typically create your own classes that extend `FlxSprite` or `FlxGroup`.
+- **Properties on Objects**: Properties like velocity, health, and animation state are stored directly on the object instances themselves.
+- **No Visual Editor/Inspector**: Like the minimalist frameworks, there is no built-in visual editor for arranging scenes or an inspector for tweaking properties. Everything is defined in code.
+
+### Architectural Summary:
+- **Philosophy**: Provide a robust, feature-rich, and code-centric framework for rapidly developing 2D games that can be deployed anywhere.
+- **Structure**: A state-based machine where each state manages a display list of game objects (Sprites, Groups, etc.). It encourages an OOP-style of development.
+
+---
+
 ## Comparison Summary
 
-| Feature | Unity | Godot | LibGDX / MonoGame | Ebiten / LÖVE | Defold | PICO-8 |
-| :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| **Core Concept** | Component-Based | Node-Based Hierarchy | Code-centric Framework | Minimalist Framework | Component & Messaging | Fantasy Console |
-| **Primary Building Block** | `GameObject` + `Components` | `Node` | Developer-defined | Developer-defined | `GameObject` + `Components` | Lua Tables |
-| **Editor Integration** | **High** | **High** | **None** | **None** | **High** | **All-in-One** |
-| **Scripting** | C# | GDScript, C# | Java / C# | Go / Lua | Lua | Lua |
-| **Architecture** | Composition (ECS) | Scene Tree | ECS, OOP | Callback-driven | Message Passing | Callback-driven |
-| **Flexibility** | Moderate | High | **Very High** | **Very High** | Moderate | **Very Low** |
-| **Learning Curve** | Moderate | Low | High | Moderate | Moderate | Low (but hard to master) |
+| Feature | Unity | Godot | LibGDX / MonoGame | Ebiten / LÖVE | Defold | PICO-8 | HaxeFlixel |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| **Core Concept** | Component-Based | Node-Based Hierarchy | Code-centric Framework | Minimalist Framework | Component & Messaging | Fantasy Console | State-based OOP |
+| **Primary Building Block** | `GameObject` + `Components` | `Node` | Developer-defined | Developer-defined | `GameObject` + `Components` | Lua Tables | `FlxSprite`, `FlxGroup` |
+| **Editor Integration** | **High** | **High** | **None** | **None** | **High** | **All-in-One** | **None** |
+| **Scripting** | C# | GDScript, C# | Java / C# | Go / Lua | Lua | Lua | Haxe |
+| **Architecture** | Composition (ECS) | Scene Tree | ECS, OOP | Callback-driven | Message Passing | Callback-driven | OOP & State Machine |
+| **Flexibility** | Moderate | High | **Very High** | **Very High** | Moderate | **Very Low** | High |
+| **Learning Curve** | Moderate | Low | High | Moderate | Moderate | Low | Moderate |
