@@ -1,0 +1,1 @@
+package context9.haxeflixel.components;\n\nimport flixel.FlxSprite;\n\nclass SpriteComponent {\n  public var sprite:FlxSprite;\n  public var added:Bool = false;\n  public function new(sprite:FlxSprite) { this.sprite = sprite; }\n}\n

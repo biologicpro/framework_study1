@@ -1,0 +1,1 @@
+package context9.haxeflixel.components;\n\nclass Position {\n  public var x:Float;\n  public var y:Float;\n  public function new(x:Float = 0, y:Float = 0) { this.x = x; this.y = y; }\n}\n

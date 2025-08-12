@@ -1,0 +1,1 @@
+package context9.haxeflixel.components;\n\nclass Velocity {\n  public var vx:Float;\n  public var vy:Float;\n  public function new(vx:Float = 0, vy:Float = 0) { this.vx = vx; this.vy = vy; }\n}\n
